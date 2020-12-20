@@ -1,0 +1,91 @@
+.ps-blogposts__post {
+  --bg: var(--PS-COLOR--APP);
+  --radius: var(--BORDER-RADIUS--MD);
+
+  position: relative;
+  margin-bottom: var(--PADD--MD);
+  line-height: var(--PS-LINE-HEIGHT);
+  background-color: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: var(--BOX-SHADOW--HARD);
+  overflow: hidden;
+
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--PADD--MD);
+    background: var(--bg);
+    background: -webkit-linear-gradient(rgba(255,255,255,0) 0%, var(--bg) 50%);
+    background: -o-linear-gradient(rgba(255,255,255,0) 0%, var(--bg) 50%);
+    background: linear-gradient(rgba(255,255,255,0) 0%, var(--bg) 50%);
+  }
+
+  @include mq($from: desktop) {
+    .ps-blogposts__list--grid & {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ps-blogposts__post-inside {}
+
+.ps-blogposts__post-body {}
+
+.ps-blogposts__post-image {
+  background-color: var(--PS-COLOR--APP--LIGHTGRAY);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  > a {
+    display: block;
+    height: 100%;
+  }
+}
+
+.ps-blogposts__post-image--top {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.ps-blogposts__post-image--left {
+  float: left;
+  margin: var(--PADD--MD);
+  margin-bottom: var(--PADD);
+  border-radius: var(--radius);
+}
+
+.ps-blogposts__post-image--right {
+  float: right;
+  margin: var(--PADD--MD);
+  margin-bottom: var(--PADD);
+  border-radius: var(--radius);
+}
+
+.ps-blogposts__post-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: var(--PADD--MD);
+  padding-bottom: var(--PADD);
+  font-size: 100%;
+  font-weight: normal;
+  border: none;
+}
+
+.ps-blogposts__post-meta {
+  padding-left: var(--PADD--MD);
+  padding-right: var(--PADD--MD);
+  font-size: 80%;
+  color: var(--PS-COLOR--TEXT--LIGHT);
+}
+
+.ps-blogposts__post-content {
+  padding: var(--PADD--MD);
+  padding-top: var(--PADD);
+  font-size: 90%;
+}

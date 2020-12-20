@@ -1,0 +1,32 @@
+# Translation of Themes - MH TechMagazine in English (UK)
+# This file is distributed under the same license as the Themes - MH TechMagazine package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-06-12 16:17:40+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha\n"
+"Language: en_GB\n"
+"Project-Id-Version: Themes - MH TechMagazine\n"
+
+#. Description of the plugin/theme
+msgid "MH TechMagazine has a nice wide and flat layout with an appealing blue color scheme, which is especially suitable for online magazines, dynamic news websites or professional blogs about technology, science, gadgets or anything else you can imagine. You can have the same layout in the premium version of MH Magazine (without the need of a child theme) which can be configured by making use of the flexible layout options. MH Magazine offers additional widget areas, multiple unique custom widgets, great features and extended layout options to manage several layout elements on your site including changing the color scheme and typography."
+msgstr "MH TechMagazine has a nice wide and flat layout with an appealing blue colour scheme, which is especially suitable for online magazines, dynamic news websites or professional blogs about technology, science, gadgets, or anything else you can imagine. You can have the same layout in the premium version of MH Magazine (without the need of a child theme), which can be configured by making use of the flexible layout options. MH Magazine offers additional widget areas, multiple unique custom widgets, great features and extended layout options to manage several layout elements on your site, including changing the colour scheme and typography."
+
+#. Theme Name of the plugin/theme
+msgid "MH TechMagazine"
+msgstr "MH TechMagazine"
+
+#. Author URI of the plugin/theme
+msgid "https://www.mhthemes.com/"
+msgstr "https://www.mhthemes.com/"
+
+#. Author of the plugin/theme
+msgid "MH Themes"
+msgstr "MH Themes"
+
+#. Theme URI of the plugin/theme
+msgid "https://www.mhthemes.com/themes/mh/techmagazine/"
+msgstr "https://www.mhthemes.com/themes/mh/techmagazine/"

@@ -1,0 +1,141 @@
+//
+//  CLASS MODIFIERS
+//
+.psw-notifs--userbar {
+  @if $rtl {
+    margin-right: var(--PADD--MD);
+  } @else {
+    margin-left: var(--PADD--MD);
+  }
+}
+
+
+//
+//  WIDGET: USERBAR
+//
+.psw-userbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .gc-widget &,
+  .header__widget & {
+    position: static;
+  }
+
+  .ps-notif__toggle {
+    position: relative;
+  }
+
+  .ps-vip__icons {
+    display: flex;
+    align-items: center;
+
+    @if $rtl {
+      margin-right: var(--PADD--SM);
+    } @else {
+      margin-left: var(--PADD--SM);
+    }
+  }
+
+  .ps-vip__icon {
+    @if $rtl {
+      margin-left: var(--PADD--SM);
+    } @else {
+      margin-right: var(--PADD--SM);
+    }
+
+    transform: none;
+  }
+
+  .ps-dropdown {
+    @include mq($until: desktop) {
+      position: static;
+    }
+  }
+
+  .ps-dropdown__menu {
+    @include mq($until: desktop) {
+      width: 100%;
+      left: 0;
+      right: 0;
+      transform: none;
+    }
+  }
+}
+
+.psw-userbar__user {
+  display: flex;
+  align-items: center;
+}
+
+.psw-userbar__name {
+  @if $rtl {
+    padding-right: var(--PADD);
+  } @else {
+    padding-left: var(--PADD);
+  }
+
+  font-size: 80%;
+
+  > a {
+    color: var(--PS-COLOR--TEXT);
+
+    &:hover,
+    &:focus {
+      color: var(--PS-COLOR--TEXT--LIGHT);
+    }
+  }
+}
+
+.psw-userbar__menu {
+  .ps-dropdown__menu {
+    z-index: 100;
+  }
+}
+
+.psw-userbar__menu-toggle {
+  @if $rtl {
+    padding-right: var(--PADD);
+  } @else {
+    padding-left: var(--PADD);
+  }
+
+  color: var(--PS-COLOR--TEXT--LIGHT);
+
+  &:hover,
+  &:focus {
+    color: var(--PS-COLOR--TEXT);
+  }
+}
+
+.psw-userbar__logout {
+  @if $rtl {
+    margin-right: var(--PADD--MD);
+  } @else {
+    margin-left: var(--PADD--MD);
+  }
+
+  color: var(--PS-COLOR--TEXT--LIGHT);
+
+  &:hover,
+  &:focus {
+    color: var(--PS-COLOR--TEXT);
+  }
+}
+
+.psw-userbar--left {
+  justify-content: flex-start;
+}
+
+.psw-userbar--right {
+  justify-content: flex-end;
+}
+
+.psw-userbar--center {
+  justify-content: center;
+}
+
+.psw-userbar--space {
+  justify-content: space-between;
+}

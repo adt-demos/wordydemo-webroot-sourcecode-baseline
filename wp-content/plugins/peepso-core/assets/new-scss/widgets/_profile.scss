@@ -1,0 +1,233 @@
+//
+//  CLASS MODIFIERS
+//
+
+//  Avatar modifier for member component
+.psw-avatar--profile {
+  --width: var(--large);
+
+  position: relative;
+  z-index: 2;
+  margin-top: var(--PADD--MD);
+
+  img {
+    border: 5px solid var(--PS-COLOR--APP);
+    box-shadow: 0 0 0 2px var(--DIVIDER);
+  }
+
+  .psw-profile--cover & {
+    img {
+      box-shadow: none;
+    }
+  }
+
+  @include mq($until: desktop) {
+    margin-top: var(--PADD--MD);
+  }
+
+  @include mq($from: desktop) {
+    --width: var(--xlarge);
+
+    .gecko & {
+      margin-top: 0;
+    }
+  }
+}
+
+.psw-notifs--profile {
+  position: relative;
+
+  .ps-notif__toggle {
+    position: relative;
+  }
+
+  @include mq($from: desktop) {
+    .ps-notif__box {
+      left: 0;
+      right: auto;
+    }
+  }
+
+  @include mq($until: desktop) {
+    .ps-notif__box {
+      left: -20px !important;
+      right: -20px !important;
+      width: auto !important;
+    }
+  }
+}
+
+
+
+//
+//  PROFILE WIDGET
+//
+.psw-profile {
+  position: relative;
+}
+
+.psw-profile__header {
+  margin-bottom: var(--PADD--MD);
+}
+
+.psw-profile__avatar {
+  position: relative;
+  margin-bottom: var(--PADD);
+  text-align: center;
+}
+
+.psw-profile__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  max-height: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: var(--BORDER-RADIUS--XL);
+  overflow: hidden;
+
+  .gecko & {
+    margin-top: calc(-1 * var(--PADD--MD));
+    margin-left: calc(-1 * var(--PADD--MD));
+    margin-right: calc(-1 * var(--PADD--MD));
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &:before {
+    content: " ";
+    display: block;
+    padding-top: 50%;
+  }
+}
+
+.psw-profile__meta {
+  .ps-notifs {
+    justify-content: center;
+  }
+
+  .ps-notif {
+    &:before {
+      content: " ";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background-color: var(--DIVIDER);
+
+      @if $rtl {
+        left: calc(-1 * (var(--PADD) - 3px));
+      } @else {
+        right: calc(-1 * (var(--PADD) - 3px));
+      }
+    }
+
+    &:last-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.psw-profile__title {
+  margin-bottom: var(--PADD);
+  text-align: center;
+
+  a {
+    color: var(--PS-COLOR--TEXT);
+
+    &:hover {
+      color: var(--PS-COLOR--TEXT);
+    }
+  }
+}
+
+.psw-profile__progress {
+  margin-top: var(--PADD);
+}
+
+.psw-profile__progress-message {
+  margin-bottom: var(--PADD);
+  font-size: 80%;
+  text-align: center;
+  color: var(--PS-COLOR--TEXT--LIGHT);
+
+  > a {
+    color: var(--PS-COLOR--TEXT--LIGHT);
+
+    &:hover,
+    &:focus {
+      color: var(--PS-COLOR--TEXT);
+    }
+  }
+}
+
+.psw-profile__progress-bar {
+  @include c-progress;
+}
+
+.psw-profile__menu {
+  border-top: 1px solid var(--DIVIDER--LIGHT);
+
+  .gecko & {
+    margin-left: calc(-1 * (var(--PADD--MD)));
+    margin-right: calc(-1 * (var(--PADD--MD)));
+  }
+
+  + .psw-profile__menu-title {
+    border-top: none;
+  }
+}
+
+.psw-profile__menu-item {
+  display: block;
+  padding: var(--PADD) var(--PADD--MD);
+  font-size: 80%;
+  color: var(--PS-COLOR--TEXT);
+  border-bottom: 1px solid var(--DIVIDER--LIGHT);
+
+  &:hover,
+  &:focus {
+    color: var(--PS-COLOR--TEXT);
+    background-color: var(--PS-COLOR--APP--GRAY);
+  }
+
+  i {
+    min-width: 20px;
+    text-align: center;
+
+    @if $rtl {
+      margin-left: var(--PADD);
+    } @else {
+      margin-right: var(--PADD);
+    }
+
+    color: var(--PS-COLOR--PRIMARY--LIGHT);
+  }
+
+  &.ps-navbar__menu-item--home {
+     i {
+       display: inline-block;
+     }
+  }
+}
+
+.psw-profile__menu-title {
+  padding: var(--PADD--MD);
+  font-size: 80%;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 2px solid var(--DIVIDER--LIGHT);
+
+  .gecko & {
+    margin-left: calc(-1 * (var(--PADD--MD)));
+    margin-right: calc(-1 * (var(--PADD--MD)));
+  }
+}

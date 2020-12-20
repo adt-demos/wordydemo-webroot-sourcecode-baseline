@@ -1,0 +1,19 @@
+.ps-postbox__menu-item--privacy {
+  .ps-postbox__menu-item-label {
+    font-size: 80%;
+  }
+}
+
+.ps-postbox__privacy {
+  @include ps-dropdown-style-menu;
+
+  .ps-dropdown__menu {
+    @include mq($until: desktop) {
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.ps-postbox__privacy-item {}

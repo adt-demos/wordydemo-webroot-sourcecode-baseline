@@ -1,0 +1,48 @@
+.peepso {
+  input,
+  textarea,
+  button {
+    font-family: var(--PS-FONT-FAMILY) !important;
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+}
+
+.ps-datepicker {
+  display: flex;
+
+  .ps-btn {
+    @if $rtl {
+      margin-right: var(--PADD--SM);
+    } @else {
+      margin-left: var(--PADD--SM);
+    }
+  }
+}
+
+.peepso__powered {
+  margin-top: var(--PADD--MD);
+  text-align: center;
+
+  > span {
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 12px;
+    color: var(--PS-COLOR--TEXT--LIGHT);
+    background-color: var(--COLOR--APP--DARKGRAY);
+    border-radius: var(--BORDER-RADIUS);
+
+    > a {
+      font-weight: bold;
+      color: var(--PS-COLOR--TEXT);
+
+      &:hover,
+      &:focus {
+        color: var(--PS-COLOR--TEXT);
+      }
+    }
+  }
+}

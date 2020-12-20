@@ -1,0 +1,162 @@
+/*****
+Theme Name: MH TechMagazine
+Theme URI: https://www.mhthemes.com/themes/mh/techmagazine/
+Description: MH TechMagazine has a nice wide and flat layout with an appealing blue color scheme, which is especially suitable for online magazines, dynamic news websites or professional blogs about technology, science, gadgets or anything else you can imagine. You can have the same layout in the premium version of MH Magazine (without the need of a child theme) which can be configured by making use of the flexible layout options. MH Magazine offers additional widget areas, multiple unique custom widgets, great features and extended layout options to manage several layout elements on your site including changing the color scheme and typography.
+Author: MH Themes
+Author URI: https://www.mhthemes.com/
+Template: mh-magazine-lite
+Version: 1.2.4
+Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, flexible-header, custom-colors, custom-header, custom-menu, featured-images, footer-widgets, theme-options, full-width-template, threaded-comments, translation-ready, rtl-language-support, blog, news
+Text Domain: mh-techmagazine
+Domain Path: /languages/
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*****/
+
+/***** Structure *****/
+
+body { color: #333f49; }
+.mh-container-outer { margin: 0 auto; box-shadow: none; }
+
+/***** Typography *****/
+
+h1, h2, h3, h4, h5, h6 { color: #333f49; }
+pre, code { background: #e9ecf6; }
+kbd { background: #e9ecf6; }
+blockquote { color: #333f49; border-color: #00aae1; }
+a { color: #333f49; }
+a:hover { color: #00aae1; }
+
+/***** Header *****/
+
+.mh-header-tagline { color: #00aae1; }
+
+/***** Navigation *****/
+
+.mh-main-nav-wrap { background: #333f49; }
+.mh-main-nav { background: #333f49; border-bottom: none; }
+.mh-main-nav li:hover { background: #00aae1; }
+.mh-main-nav ul li:hover > ul { background: #333f49; }
+.mh-main-nav .menu > .current-menu-item { background: none; }
+.mh-main-nav .menu > .current-menu-item:hover { background: #00aae1; }
+
+/***** SlickNav Custom Style *****/
+
+.slicknav_btn { background: #00aae1; }
+.slicknav_menu { border-color: #333f49; background: #00aae1; }
+.slicknav_nav ul { border-color: #333f49; }
+.slicknav_nav .slicknav_item:hover, .slicknav_nav a:hover { background: #00aae1; }
+.mh-main-nav-wrap .slicknav_btn, .mh-main-nav-wrap .slicknav_menu, .mh-main-nav-wrap .slicknav_nav .slicknav_item:hover, .mh-main-nav-wrap .slicknav_nav a:hover { background: transparent; }
+.mh-main-nav-wrap .slicknav_nav ul { border-color: #00aae1; }
+.mh-main-nav-wrap .slicknav_nav ul ul { border: none; }
+
+/***** Posts/Pages *****/
+
+.page-title { color: #333f49; }
+.mh-meta, .mh-meta a, .mh-footer .mh-meta a { color: #607d8b; }
+.mh-meta a:hover, .mh-footer .mh-meta a:hover { color: #00aae1; }
+.entry-content a { color: #00aae1; }
+.entry-content a:hover { color: #00aae1; }
+.entry-tags li { background: #333f49; }
+.entry-tags li:hover { background: #00aae1; }
+.entry-tags .fa { background: #00aae1; }
+
+/***** Pagination *****/
+
+.page-numbers { color: #333f49; background: #e9ecf6; }
+.page-numbers:hover, .mh-loop-pagination .current, .mh-comments-pagination .current, a:hover .pagelink { background: #00aae1; }
+.pagelink { background: #00aae1; }
+a .pagelink { color: #333f49; background: #e9ecf6; }
+
+/***** Footer *****/
+
+.mh-footer { background: #333f49; }
+.mh-footer a { color: #e9ecf6; }
+.mh-copyright-wrap { border-color: #555; background: #333f49; }
+.mh-copyright, .mh-copyright a { color: #e9ecf6; }
+
+/***** Images / Video *****/
+
+.wp-caption-text, .wp-block-image figcaption, .wp-block-audio figcaption { color: #333f49; }
+
+/***** Gallery *****/
+
+.gallery-caption { color: #fff; }
+
+/***** Comments *****/
+
+.bypostauthor .mh-comment-meta-author:after, .mh-comment-meta-links .comment-reply-link:before, #respond #cancel-comment-reply-link:before { color: #00aae1; }
+
+/***** Forms *****/
+
+input[type=text]:hover, input[type=email]:hover, input[type=tel]:hover, input[type=url]:hover, textarea:hover { border-color: #00aae1; }
+input[type=submit] { background: #00aae1; }
+input[type=submit]:hover { background: #333f49; }
+
+/***** Searchform *****/
+
+.mh-widget .search-form { background: #e9ecf6; }
+
+/***** Widgets *****/
+
+.mh-widget-title { font-size: 14px; font-size: 0.875rem; color: #fff; padding: 10px 15px; background: #00aae1; border-bottom: none; }
+.mh-widget-title a { color: #fff; }
+
+/***** Widgets Areas (Advertising) *****/
+
+.mh-ad-spot, .mh-info-spot { background: #e9ecf6; }
+
+/***** MH Slider Widget *****/
+
+.mh-slider-widget img { width: 100%; display: block; }
+.mh-slider-widget .flex-control-nav { width: auto; top: 20px; right: 15px; bottom: auto; }
+.mh-slider-widget .flex-control-paging li a { width: 20px; height: 20px; background: #fff; border: none; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; -webkit-box-shadow: none; -moz-box-shadow: none; -o-box-shadow: none; box-shadow: none; }
+.mh-slider-widget .flex-control-paging li a:hover { background: #f5f5f5; }
+.mh-slider-widget .flex-control-paging li a.flex-active { background: #00aae1; border: none; }
+.mh-slider-caption { top: 0; bottom: 0; left: 0; background: #333f49; background: rgba(51, 63, 73, 0.8); border: none; }
+.mh-slider-caption, .mh-slider-caption .mh-excerpt-more, .mh-slider-title { color: #e9ecf6; }
+.mh-widget-col-1 .flex-control-nav, .mh-widget-col-2 .flex-control-nav { top: 15px; right: 10px; }
+.mh-widget-col-1 .mh-slider-caption { background: #333f49; }
+.mh-footer-widget .mh-slider-caption { background: rgba(255, 255, 255, 0.1); }
+
+/***** MH Posts Stacked Widget *****/
+
+.mh-posts-stacked-title { background: #333f49; background: rgba(51, 63, 73, 0.8); }
+.mh-posts-stacked-meta { background: #00aae1; }
+#mh-mobile .mh-footer-widget .mh-posts-stacked-overlay { border-color: #333f49; }
+
+/***** MH Tabbed Widget *****/
+
+.mh-tabbed-widget, .mh-tabbed-widget a { color: #333f49; }
+.mh-tabbed-widget a:hover { color: #00aae1; }
+.mh-tabbed-widget .tagcloud a { color: #fff; }
+.mh-tab-buttons { border-bottom: 3px solid #00aae1; }
+.mh-tab-button { background: #e9ecf6; }
+.mh-tab-button.active, .mh-tab-button.active:hover { color: #fff; background: #00aae1; }
+.mh-tab-content { background: #e9ecf6; }
+.mh-footer-widget .mh-tabbed-widget, .mh-footer-widget .mh-tabbed-widget a { color: #fff; }
+.mh-footer-widget .mh-tab-button.active { background: #00aae1; }
+.mh-footer-widget .mh-tab-comment-excerpt { background: #333f49; }
+
+/***** WP Calendar Widget *****/
+
+#wp-calendar caption { background: #e9ecf6; }
+
+/***** WP Tag Cloud Widget *****/
+
+.mh-widget .tagcloud a { background: #333f49; }
+.mh-footer-widget .tagcloud a { background: #333f49; }
+.tagcloud a:hover, .mh-widget .tagcloud a:hover, .mh-footer-widget .tagcloud a:hover { background: #00aae1; }
+
+/***** WP Recent Posts Widget / WP Recent Comments Widget *****/
+
+.widget_recent_entries .post-date { color: #607d8b; margin-bottom: 5px; }
+
+/***** Media Queries *****/
+
+@media screen and (max-width: 900px) {
+	#mh-mobile .mh-slider-caption { background: #333f49; background: rgba(51, 63, 73, 1); }
+}
+@media only screen and (max-width: 420px) {
+	.mh-copyright-wrap { padding: 15px 20px; }
+}

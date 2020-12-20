@@ -1,0 +1,134 @@
+.ps-checkbox {
+  --width: 18px;
+  --height: 18px;
+  --radius: var(--BORDER-RADIUS);
+  --border: var(--c-ps-checkbox-border);
+
+  position: relative;
+  line-height: var(--PS-LINE-HEIGHT);
+}
+
+.ps-checkbox--switch {
+  --width: 30px;
+  --height: 16px;
+  --radius: var(--height);
+
+  .ps-checkbox__label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:before {
+      content: " ";
+      display: block;
+      width: var(--width);
+      height: calc(var(--height) / 1.2);
+      min-width: var(--width);
+
+      @if $rtl {
+        margin-left: var(--PADD);
+      } @else {
+        margin-right: var(--PADD);
+      }
+
+      background-color: var(--PS-COLOR--APP--DARKGRAY);
+      border-radius: var(--radius);
+      transition: all .3s ease-in-out;
+    }
+
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+
+      @if $rtl {
+        right: -1px;
+      } @else {
+        left: -1px;
+      }
+
+      transform: translateY(-50%);
+      width: calc(var(--height) + 2px);
+      height: calc(var(--height) + 2px);
+      border-radius: 100%;
+      background-color: var(--PS-COLOR--APP);
+      border: 2px solid var(--DIVIDER--DARK);
+      box-shadow: var(--BOX-SHADOW);
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  .ps-checkbox__input:checked + .ps-checkbox__label {
+    &:before {
+      background-color: var(--PS-COLOR--PRIMARY--LIGHT);
+    }
+
+    &:after {
+      @if $rtl {
+        right: var(--width);
+        transform: translateY(-50%) translateX(var(--height));
+      } @else {
+        left: var(--width);
+        transform: translateY(-50%) translateX(calc(-1 * var(--height)));
+      }
+
+      border: 2px solid var(--PS-COLOR--PRIMARY--LIGHT);
+    }
+  }
+}
+
+.ps-checkbox__input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.ps-checkbox__label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--width);
+    height: var(--height);
+    min-width: var(--width);
+
+    @if $rtl {
+      margin-left: var(--PADD);
+    } @else {
+      margin-right: var(--PADD);
+    }
+
+    font-size: 11px;
+    color: transparent;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px var(--border);
+    border-radius: var(--radius);
+    transition: all .3s ease-in-out;
+  }
+
+  .ps-checkbox__input:checked + & {
+    &:before {
+      color: var(--PS-COLOR--TEXT--INVERT);
+      background-color: var(--PS-COLOR--PRIMARY--LIGHT);
+      box-shadow: inset 0 0 0 2px transparent;
+    }
+  }
+}
+
+.ps-checkbox__grid {
+  @include mq($from: desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: var(--PADD);
+    grid-row-gap: var(--PADD);
+  }
+}
